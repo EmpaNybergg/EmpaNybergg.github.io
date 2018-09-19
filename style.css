@@ -125,7 +125,7 @@ body {
 }
 
 .hero-section {
-  background: url("../Landing_page/images/hero.jpg") 100% no-repeat;
+  background: url("images/hero.jpg") 100% no-repeat;
   background-size: cover;
   height: 60vh;
   text-align: center;
