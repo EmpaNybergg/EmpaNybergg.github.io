@@ -175,8 +175,8 @@ nav div:first-child h1, nav ul{
 
 /*SLIDESHOW*/
 .fling-minislide {
-    width:100%;
-    height:550px;
+    width:100%; 
+    height:82vh;  /*BEHÖVER HJÄLP MED DENNA*/
     overflow:hidden;
     position:relative;
     padding: 0; }
