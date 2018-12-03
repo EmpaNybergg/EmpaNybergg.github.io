@@ -1,0 +1,323 @@
+body, html{
+    font-size: 20px;
+    font-family: "Helvetica", sans-serif;
+    box-sizing: border-box;
+}
+body,html{
+    margin:0;
+    padding: 0;
+    background: grey;
+}
+figure img {
+    width: 100%;
+}
+img.logo {
+    padding: 5px;
+    height: 150px;
+
+}
+nav ul{
+    list-style: none;
+    padding:0;
+    background:white;
+    
+}
+
+nav ul li a{
+    color:black;
+    text-decoration: none;
+    padding: .8rem 1rem;
+    display: block;
+    line-height: 1;
+
+}
+/*styling logo*/
+
+nav div:first-child h1{
+    line-height: 0;
+    padding: .8rem 0rem;
+    text-align: center;
+}
+
+nav div:first-child h1, nav ul{
+    margin:0;
+}
+
+/*Styling for larger devices*/
+
+@media only screen and (min-width: 50em){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        align-items: center;
+        border-bottom: 2px solid black;
+    }
+    
+    nav ul{
+        display: flex;
+        align-items: center;
+        background:none;
+        flex-wrap: wrap;
+    }
+    nav div:first-child h1{
+        padding: 0;
+        margin:0 1rem;
+    }
+    nav div:first-child img{
+        height: 75px;
+        padding-left: 60px;
+        
+    }
+    nav ul li{
+        border-bottom:none;
+        flex: 1 0 auto;
+        position: relative;
+    }
+    nav ul li a{
+        padding:1.2rem 1rem;
+    }
+    nav ul li a::before, nav ul li a::after{
+        content: "";
+        position: absolute;
+        bottom:10px;
+        right: 0;
+        width:0%;
+        height: 2px;
+        background:black;
+        transition: .4s width ease-in-out;
+        
+    }
+    
+    nav ul li a::before{
+        left:0;
+    }
+    
+    nav ul li a:hover::after,nav ul li a:hover::before{
+        width: 50%;
+    } 
+   
+}
+
+/* 3 kolumner */
+.column {
+    display: inline-block;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    margin-top: 10px;
+    margin: 30px;
+  }
+  
+  /* visa dom under varandra när sidan är mindre än 750px */
+  @media screen and (max-width: 800px) {
+    .column {
+        width: 50%;
+        display: block;
+    }
+  }
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* skuggor */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow-wrap: break-word;
+    background-color: rgb(82, 81, 81);
+  }
+  
+  /* padding inuti */
+  .container {
+    padding: 0 16px;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  /*Footer*/
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+    font-size: 10px;
+    padding-left: 20px;
+  }
+.rotate {
+    transform: rotate(180deg);
+    height: 290px;
+  }
+
+/*SLIDESHOW*/
+.fling-minislide {
+    width:100%; 
+    height:82vh;  /*BEHÖVER HJÄLP MED DENNA*/
+    overflow:hidden;
+    position:relative;
+    padding: 0; }
+.fling-minislide img{ 
+    position:absolute;
+    animation:fling-minislide 20s infinite;
+    opacity:0;
+    width: 100%;
+    height: auto;
+    padding: 0;}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}} 
+.fling-minislide img:nth-child(4){animation-delay:0s;}
+.fling-minislide img:nth-child(3){animation-delay:5s;}
+.fling-minislide img:nth-child(2){animation-delay:10s;}
+.fling-minislide img:nth-child(1){animation-delay:15s;}
+
+/*INSTAGRAM*/
+.instagram {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 5px;
+    right: 3%;
+    cursor: pointer;
+}
+.instagram:hover {
+    height: 22px;
+    width: 22px;
+}
+
+/*Email*/
+.email {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 5px;
+    right: 6%;
+    cursor: pointer;
+}
+.email:hover {
+    height: 22px;
+    width: 22px;
+}
+
+/*SWISH*/
+.nummer {
+    right: 8%;
+    width: 180px;
+    height: 20px;
+    font-size: 1.5em;
+    position: absolute;
+    top: -7px;
+    color: white;
+}
+
+
+ .bildgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    justify-items: center;
+    grid-gap: 15px;
+    grid-row-gap: 10px;
+    padding: 0;
+    margin: 2% 5% 0 5%;
+
+
+}
+
+.bild {
+    position: relative;
+}
+
+.bild img{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 2px solid black;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+}
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* opacity */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .3s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;;
+  }
+
+  .bild:hover .overlay {
+    opacity: 1;
+  }
+
+ /*FORMULÄR*/
+ .formwrapper {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .formwrapper > h1 {
+     color: rgb(49, 49, 49);
+     text-align: center;
+ }
+ .myForm {
+    padding-top: 10vw;
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: row;
+    grid-gap: .8em;
+    background: #eee;
+    padding: 1.2em;
+    width: 50vw;    
+    justify-content: center;
+    border-radius: 2%;
+    
+  }
+  .myForm > label  {
+    grid-column: labels;
+    grid-row: auto;
+  }
+  .myForm > input,
+  .myForm > textarea,
+  .myForm > button {
+    grid-column: controls;
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+  }
+
+
+  /*NYA KORTEN*/
